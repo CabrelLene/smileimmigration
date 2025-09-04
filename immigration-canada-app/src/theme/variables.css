@@ -1,2 +1,14 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+:root {
+  --ion-color-primary: #5dd6ff;
+  --ion-color-primary-contrast: #0b1220;
+  --ion-color-secondary: #9bffb3;
+  --ion-color-tertiary: #ffd166;
+
+  --bg-gradient: radial-gradient(1200px 600px at 10% -10%, rgba(93,214,255,.25), transparent 60%),
+                 radial-gradient(800px 400px at 90% 10%, rgba(155,255,179,.2), transparent 60%),
+                 linear-gradient(180deg, #0b1220 0%, #0d1324 100%);
+
+  --glass: rgba(255,255,255,0.08);
+  --glass-border: 1px solid rgba(255,255,255,0.13);
+  --blur: saturate(120%) blur(8px);
+}
