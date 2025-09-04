@@ -1,14 +1,53 @@
+/* Valeurs par défaut si pas d'attribut */
 :root {
-  --ion-color-primary: #5dd6ff;
-  --ion-color-primary-contrast: #0b1220;
-  --ion-color-secondary: #9bffb3;
-  --ion-color-tertiary: #ffd166;
+  --ion-text-color: #e6f1ff;
+  --ion-color-primary: #7dd3fc;
+  --ion-color-primary-contrast: #0a0f1a;
+  --ion-color-secondary: #34d399;
+  --ion-color-tertiary: #fbbf24;
 
-  --bg-gradient: radial-gradient(1200px 600px at 10% -10%, rgba(93,214,255,.25), transparent 60%),
-                 radial-gradient(800px 400px at 90% 10%, rgba(155,255,179,.2), transparent 60%),
-                 linear-gradient(180deg, #0b1220 0%, #0d1324 100%);
+  --bg-gradient:
+    radial-gradient(1200px 600px at 10% -10%, rgba(125,211,252,.20), transparent 60%),
+    radial-gradient(800px 400px at 90% 10%, rgba(52,211,153,.18), transparent 60%),
+    linear-gradient(180deg, #0a0f1a 0%, #0c1222 100%);
 
   --glass: rgba(255,255,255,0.08);
-  --glass-border: 1px solid rgba(255,255,255,0.13);
-  --blur: saturate(120%) blur(8px);
+  --glass-border: 1px solid rgba(255,255,255,0.12);
+  --blur: saturate(120%) blur(10px);
+
+  --shadow-1: 0 10px 30px rgba(0,0,0,.35);
+  --shadow-2: 0 16px 40px rgba(0,0,0,.45);
+
+  --r-lg: 18px;
+  --r-xl: 24px;
+}
+
+/* Thème sombre */
+:root[data-theme="dark"] {
+  --ion-text-color: #e6f1ff;
+  --ion-color-primary: #7dd3fc;
+  --ion-color-primary-contrast: #0a0f1a;
+  --ion-color-secondary: #34d399;
+  --ion-color-tertiary: #fbbf24;
+  --bg-gradient:
+    radial-gradient(1200px 600px at 10% -10%, rgba(125,211,252,.20), transparent 60%),
+    radial-gradient(800px 400px at 90% 10%, rgba(52,211,153,.18), transparent 60%),
+    linear-gradient(180deg, #0a0f1a 0%, #0c1222 100%);
+  --glass: rgba(255,255,255,0.08);
+  --glass-border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Thème clair */
+:root[data-theme="light"] {
+  --ion-text-color: #0b1220;
+  --ion-color-primary: #2563eb;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-secondary: #059669;
+  --ion-color-tertiary: #d97706;
+  --bg-gradient:
+    radial-gradient(1000px 480px at 10% -10%, rgba(37,99,235,.15), transparent 60%),
+    radial-gradient(700px 360px at 90% 10%, rgba(5,150,105,.14), transparent 60%),
+    linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);
+  --glass: rgba(255,255,255,0.7);
+  --glass-border: 1px solid rgba(0,0,0,0.08);
 }

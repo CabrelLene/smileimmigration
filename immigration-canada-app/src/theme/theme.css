@@ -1,44 +1,85 @@
-html, body, ion-app {
-  height: 100%;
-}
+html, body, ion-app { height: 100%; }
 body {
   background: var(--bg-gradient);
-  color: #e6f1ff;
+  color: var(--ion-text-color);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+/* Container fluide */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* Glass card générique */
 .glass {
   background: var(--glass);
   border: var(--glass-border);
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-1);
 }
 
+/* Titres héro */
 .hero-title {
+  font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.05;
+  font-size: clamp(28px, 5vw, 46px);
 }
 
-.cta {
+/* Bouton “néon” */
+.btn-primary {
   display: inline-flex;
   align-items: center;
   gap: .6rem;
-  padding: .95rem 1.2rem;
+  padding: .9rem 1.15rem;
   border-radius: 14px;
   font-weight: 700;
+  color: #0b1220;
+  background: linear-gradient(180deg, #7dd3fc, #60a5fa);
   border: 1px solid rgba(255,255,255,.18);
-  background: linear-gradient(180deg, rgba(93,214,255,.25), rgba(93,214,255,.12));
-  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 8px 24px rgba(96,165,250,.35);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
-.cta:hover { transform: translateY(-1px) scale(1.01); box-shadow: 0 8px 20px rgba(93,214,255,.22); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(96,165,250,.5); filter: saturate(110%); }
 
-.pulse {
-  animation: pulse 2s infinite;
+/* Bouton fantôme */
+.btn-ghost {
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding: .85rem 1.05rem; border-radius: 14px; font-weight: 700;
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  color: #e6f1ff;
 }
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(93,214,255,.5); }
-  70% { box-shadow: 0 0 0 16px rgba(93,214,255,0); }
-  100% { box-shadow: 0 0 0 0 rgba(93,214,255,0); }
+.btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+/* Carte programme */
+.card {
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow-1);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: rgba(255,255,255,.18); }
+
+/* Grilles responsives rapides */
+.grid-2 { display:grid; gap: 14px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+.grid-3 { display:grid; gap: 14px; grid-template-columns: repeat(3, minmax(0,1fr)); }
+@media (max-width: 900px){ .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+/* Petites étiquettes */
+.chip {
+  font-size: .85rem; padding: 6px 10px; border-radius: 999px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+}
+
+/* Sections */
+.section { margin-top: 22px; }
+.section h3 { font-weight: 800; letter-spacing: -.02em; margin: 0 0 10px; }
