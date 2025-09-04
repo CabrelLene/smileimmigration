@@ -1,0 +1,7 @@
+{
+  "name": "immigration-canada-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
